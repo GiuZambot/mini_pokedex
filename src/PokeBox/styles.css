@@ -1,0 +1,32 @@
+.card {
+    position: relative;
+    width: 50%;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+}
+
+.habilidadeBtn {
+    background-color: burlywood;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    position: absolute;
+    padding: 100px;
+    width: 50%;
+    height: 50%;
+    background-color: cadetblue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+}
