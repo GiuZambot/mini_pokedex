@@ -10,6 +10,13 @@
     box-shadow: 5px 5px 5px black;
 }
 
+.card input{
+    text-align: center;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 18px;
+}
+
 .habilidadeBtn {
     background-color: burlywood;
     padding: 5px;
@@ -23,10 +30,14 @@
     padding: 100px;
     width: 50%;
     height: 50%;
-    background-color: cadetblue;
+    background-color: rgb(176, 219, 221);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 5px 5px black;
+}
+
+.poke-img {
+    width: 250px;
 }
