@@ -26,6 +26,7 @@ function Pokebox() {
             const pokeName: string = e.target.value.toLowerCase();
             const pokeData = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
             const pokeObj = await pokeData.json();
+            e.target.value = '';
             setPokemon(pokeObj);
         } catch (error) {
             alert("Pokemon não encontrado");
@@ -56,14 +57,16 @@ function Pokebox() {
             <h2>Pokemon:</h2>
             {pokemon &&
                 <div className="poke-infos">
-                    <div>
+                    <div className="direita">
                         <p>Nome: <strong>{pokemon.species.name}</strong></p>
-                        <p>Altura: {pokemon.height}</p>
-                        <p>Peso: {pokemon.weight}</p>
-                        <p>Altura: {pokemon.height}</p>
+                        <div className="status">
+                            Status:
+                            {pokemon.stats.map((s: any) => <span style={{ width: s.base_stat * 3 + 'px' }}>{s.stat.name} {s.base_stat}</span>)}
+                        </div>
                         <p>
                             Habilidades:
                             {pokemon.abilities.map((a: any) => <Hab nome={a.ability.name} handleClick={handleClickHabilidade} key={a.ability.name} />)}
+
                         </p>
                         <p className="poke-imgs">
                             {
@@ -74,7 +77,10 @@ function Pokebox() {
                         </p>
                     </div>
                     <div>
-                        <img className="poke-img" src={pokemon.sprites.other["official-artwork"].front_default} alt="Foto Pokemon" />
+                        <img className="poke-img" src={`https://www.smogon.com//dex/media/sprites/xy/${pokemon.species.name}.gif`} alt="gif pokemon" />
+                    </div>
+                    <div>
+                        <img src={pokemon.sprites.other["official-artwork"].front_default} alt="Foto Pokemon" />
                     </div>
                 </div>
             }
