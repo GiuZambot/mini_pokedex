@@ -2,12 +2,19 @@
     position: relative;
     width: 50%;
     border-radius: 20px;
-    background-color: antiquewhite;
+    background-image: linear-gradient(-45deg, rgb(49, 49, 49) 50% ,rgb(74, 136, 74) 50% 55%, rgb(156, 199, 131) 50% 100% );
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     box-shadow: 5px 5px 5px black;
+}
+
+h2 {
+    color: aliceblue;
+    background-color: black;
+    padding: 15px;
+    transform: skewX(-25deg);
 }
 
 .card input{
@@ -18,11 +25,19 @@
 }
 
 .habilidadeBtn {
-    background-color: burlywood;
-    padding: 5px;
+    background-color: rgb(68, 68, 67);
+    color: aliceblue;
+    font-weight: 700;
+    padding: 5px 5px 7px 5px;
     margin: 0 5px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.habilidadeBtn:hover {
+    background-color: rgb(68, 68, 67);
+    color: rgb(238, 240, 112);
+    box-shadow: 3px 3px 3px black;
 }
 
 .hidden {
@@ -37,7 +52,25 @@
     align-items: center;
     box-shadow: 5px 5px 5px black;
 }
+.poke-infos{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
 
-.poke-img {
-    width: 250px;
+.poke-sprite {
+    width: 100px;
+    border: 2px solid rgb(173, 226, 152);
+    border-radius: 50%;
+    background-color: rgb(68, 66, 64);
+    margin: 10px;
+}
+
+.poke-imgs {
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 }
