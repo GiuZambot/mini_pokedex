@@ -1,6 +1,7 @@
 .card {
     position: relative;
     width: 70%;
+    padding: 10px;
     border-radius: 20px;
     background-image: linear-gradient(-45deg, rgb(49, 49, 49) 50% ,rgb(74, 136, 74) 50% 55%, rgb(156, 199, 131) 50% 100% );
     display: flex;
@@ -66,8 +67,17 @@ h2 {
     margin: 10px;
 }
 
-.poke-img {
+.poke-gif {
     width: 120px;
+}
+
+.poke-img {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.poke-cap {
+    width: 0px;
 }
 
 .poke-imgs {
@@ -131,8 +141,10 @@ h2 {
 @keyframes statusbar {
     0% {
         transform: scaleX(1) translateX(0px);
+        opacity: 0.8;
       }
       100% {
-        transform: scaleX(1.05) translateX(5px);
+        transform: scaleX(1.03) translateX(5px);
+
       }
 }
